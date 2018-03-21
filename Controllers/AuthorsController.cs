@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Fisher.Bookstore.Api.Data;
 using Fisher.Bookstore.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -76,7 +77,7 @@ namespace Fisher.Bookstore.Api.Controllers
                 return NotFound();
             }
 
-            currentAuthor.EMail = newAuthor.EMail;
+            currentAuthor.Bio = newAuthor.Bio;
 
             this.db.Authors.Update(currentAuthor);
             this.db.SaveChanges();
